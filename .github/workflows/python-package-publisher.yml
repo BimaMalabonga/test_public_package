@@ -10,7 +10,7 @@ on:
     branches: [ "master" ]
 
 jobs:
-  versioning:
+  package_publisher:
 
     runs-on: ubuntu-latest
     strategy:

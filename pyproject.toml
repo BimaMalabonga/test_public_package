@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "test_public_package"
-version = "0.1.0"
+version = "0.1.1"
 description = ""
 authors = ["x <x@det.nl>"]
 readme = "README.md"

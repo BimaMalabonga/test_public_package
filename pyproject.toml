@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "poetrytemplate"
+name = "test_public_package"
 version = "0.1.0"
 description = ""
 authors = ["x <x@det.nl>"]

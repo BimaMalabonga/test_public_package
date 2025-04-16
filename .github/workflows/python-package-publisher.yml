@@ -101,9 +101,11 @@ jobs:
             exit 1
           fi
 
+      # -------------------------------------------------------------------------------------------
+      # The next steps are only triggered by push to master, not by pull requests
+      # -------------------------------------------------------------------------------------------
+
       - name: Create and push tag
-        # Only create tag if workflow is triggered by push to master, not if it is triggered by
-        # a pull request.
         if: github.event_name == 'push' && env.EXISTS == 'false'
         run: |
           git config --global user.name "github-actions[bot]"

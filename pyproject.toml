@@ -1,6 +1,6 @@
 [tool.poetry]
-name = "poetrytemplate"
-version = "0.1.0"
+name = "test_public_package"
+version = "0.1.1"
 description = ""
 authors = ["x <x@det.nl>"]
 readme = "README.md"
@@ -13,6 +13,7 @@ packages = [
 python = ">=3.11,<4.0"
 
 [tool.poetry.group.dev.dependencies]
+toml = "^0.10.2"
 invoke = "^2.2.0"
 pytest = "^8.3.4"
 pytest-cov = "^6.0.0"

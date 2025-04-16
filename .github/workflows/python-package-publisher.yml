@@ -10,7 +10,7 @@ on:
     branches: [ "master" ]
 
 jobs:
-  tag_and_publish:
+  package_publisher:
 
     runs-on: ubuntu-latest
     strategy:
@@ -112,9 +112,11 @@ jobs:
           git push origin v${{ env.VERSION }}
 
       - name: Build package
+        if: github.event_name == 'push' && env.EXISTS == 'false'
         run: poetry build
 
       - name: Publish to PyPI
+        if: github.event_name == 'push' && env.EXISTS == 'false'
         env:
           POETRY_PYPI_TOKEN_PYPI: ${{ secrets.PYPI_API_TOKEN }}
         run: poetry publish --skip-existing --no-interaction
